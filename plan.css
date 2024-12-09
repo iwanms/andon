@@ -1,0 +1,527 @@
+@font-face {
+  font-family: "DigitalNumber";
+  src: url("font/DS-DIGIT.TTF") format("truetype");
+}
+
+body {
+  background-image: url("image/assy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.bg-tkg-green {
+  background: linear-gradient(45deg, #005062 0%, #14a79f 70%, #04d8cd 100%);
+}
+
+.bg-tkg-blue {
+  background: linear-gradient(45deg, #013362 0%, #1181d1 100%);
+}
+
+.bg-tkg-orange {
+  background: linear-gradient(45deg, #f96363 0%, #ffb641 100%);
+}
+
+.bg-tkg-red {
+  background: linear-gradient(45deg, #620101 0%, #b80000 100%);
+}
+
+.text-tkg-green {
+  color: #005062;
+}
+
+.text-tkg-blue {
+  color: #013362;
+}
+
+.text-tgk-purple {
+  color: #805bf1;
+}
+
+.text-tkg-silver {
+  color: #c7c7c7;
+}
+
+.box-time-cal {
+  text-align: center;
+  padding: 5px 5px;
+  margin-top: 5px;
+}
+
+.box-time-cal .time {
+  font-size: 3.5em;
+}
+
+.box-time-cal .calendar {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  margin-right: -50px;
+  margin-top: -20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.box-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-footer .logo {
+  text-align: center;
+  padding: 10px 20px;
+  color: green;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.box-footer .box-run-text {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.run-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 40s infinite;
+  font-size: 16pt;
+  color: #fff;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* custom class bootstrap 5 */
+.navbar {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  background-color: #fff;
+  padding: 5px 15px;
+  font-weight: bold;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar-brand .brand-text {
+  font-weight: bold;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  font-size: 2em;
+}
+
+.navbar .container-fluid {
+  padding: unset;
+}
+
+.nav-2 {
+  margin-right: -5px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: transparent;
+  color: #fff;
+  font-family: "DigitalNumber", monospace;
+  font-size: 24pt;
+}
+
+/* end custom class bootstrap 5 */
+
+@media (max-width: 1000px) {
+  .navbar {
+    height: 110px;
+    margin-bottom: 30px;
+  }
+
+  .navbar-brand {
+    background-color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-top: -20px;
+  }
+
+  .navbar-brand .brand-text {
+    font-size: 1.5em;
+  }
+
+  .nav-2 {
+    margin-right: -5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    font-family: "DigitalNumber", monospace;
+    font-size: 24pt;
+  }
+
+  .box-time-cal {
+    text-align: center;
+    padding: 5px 5px;
+    margin-top: -10px;
+  }
+
+  .box-time-cal .time {
+    font-size: 3em;
+  }
+
+  .box-time-cal .calendar {
+    font-size: 1.2em;
+    margin-right: -50px;
+    margin-top: -10px;
+  }
+}
+
+.box-plan {
+  width: 600px;
+  height: 170px;
+  padding: 10px 10px;
+  margin: 30px 0 30px 0;
+  border-radius: 25px;
+  margin-left: 20%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.box-plan .text-plan {
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-plan .text-plan span {
+  margin-left: 10px;
+  font-size: 26pt;
+}
+
+.box-rate {
+  height: 100%;
+  width: 80%;
+  background-color: #ffffffc9;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+.circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: conic-gradient(
+      from 0deg,
+      rgba(133, 133, 133, 0) 0% 75%,
+      #c7c7c7 0% 100%
+    ),
+    linear-gradient(to bottom, #805bf1 0%, #fe42dc 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.content h1 {
+  font-weight: bold;
+  font-size: 5em;
+}
+
+.content span {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.box-model {
+  margin-top: 80px;
+  width: 98%;
+  height: 250px;
+  padding: 10px 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #805bf1 0%, #fe42dc 100%);
+}
+
+.table-model {
+  width: 100%;
+}
+
+.table-model tr td {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.8em;
+}
+
+/* responsive width */
+@media (max-width: 1800px) {
+  .box-model {
+    line-height: 70px;
+  }
+
+  .table-model tr td {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1500px) {
+  .box-plan {
+    margin-left: 10%;
+    width: 500px;
+    height: 160px;
+    padding: 10px 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .box-plan .text-plan {
+    font-size: 3.3em;
+  }
+
+  .box-plan .text-plan span {
+    margin-left: 10px;
+    font-size: 24pt;
+  }
+
+  .box-rate {
+    margin-top: 25px;
+    height: 95%;
+  }
+
+  .box-model {
+    height: 200px;
+    line-height: 55px;
+  }
+
+  .table-model tr td {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 1300px) {
+  .circle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  .box-rate {
+    margin-top: 50px;
+    height: 90%;
+  }
+
+  .table-model tr td {
+    font-size: 1.5em;
+  }
+
+  .box-model {
+    margin-top: 100px;
+    height: 180px;
+    line-height: 50px;
+  }
+
+  .box-plan {
+    margin-left: 10%;
+    width: 500px;
+    height: 140px;
+    padding: 10px 10px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .box-plan .text-plan {
+    margin-top: 15px;
+    font-size: 3.3em;
+  }
+
+  .box-plan .text-plan span {
+    margin-left: 10px;
+    font-size: 24pt;
+  }
+}
+
+@media (max-width: 1200px) {
+  .circle {
+    margin-top: 50px;
+    width: 310px;
+    height: 310px;
+  }
+
+  .circle::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  .box-rate {
+    margin-top: 50px;
+    height: 90%;
+  }
+
+  .table-model tr td {
+    font-size: 1.2em;
+  }
+
+  .box-model {
+    height: 160px;
+    margin-top: 50px;
+    line-height: 45px;
+  }
+
+  .box-plan {
+    margin-left: 8%;
+    width: 390px;
+    height: 120px;
+    padding: 10px 10px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .box-plan .text-plan {
+    margin-top: 17px;
+    font-size: 2.4em;
+  }
+
+  .box-plan .text-plan span {
+    margin-left: 10px;
+    font-size: 24pt;
+  }
+}
+
+/* responsive height */
+@media (max-height: 1000px) {
+  .box-plan {
+    margin: 30px 0 30px 0;
+    margin-left: 10%;
+    height: 140px;
+  }
+
+  .box-plan .text-plan {
+    margin-top: 10px;
+  }
+
+  .box-rate {
+    margin-top: 10px;
+    height: 100%;
+  }
+
+  .circle {
+    margin-top: 30px;
+    height: 300px;
+    width: 300px;
+  }
+
+  .circle::before {
+    width: 170px;
+    height: 170px;
+  }
+
+  .content h1 {
+    font-size: 3em;
+  }
+
+  .content span {
+    font-size: 15pt;
+  }
+
+  .box-model {
+    height: 160px;
+    margin-top: 90px;
+  }
+}
+
+@media (max-height: 1000px) and (min-width: 1200px) {
+  .box-plan {
+    margin: 20px 0 20px 0;
+    margin-left: 10%;
+  }
+
+  .circle {
+    margin-top: 20px;
+  }
+
+  .box-model {
+    height: 180px;
+    margin-top: 60px;
+  }
+
+  .table-model tr td {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-height: 1000px) and (min-width: 1300px) {
+  .box-model {
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .table-model tr td {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-height: 1000px) and (min-width: 1500px) {
+  .box-plan {
+    margin: 10px 0 10px 0;
+    margin-left: 10%;
+  }
+
+  .box-model {
+    line-height: 55px;
+  }
+
+  .table-model tr td {
+    font-size: 1.8em;
+  }
+}
